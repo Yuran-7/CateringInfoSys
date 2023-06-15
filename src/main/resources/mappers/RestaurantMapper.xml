@@ -5,5 +5,10 @@
 <mapper namespace="com.aks.cateringinfosys.mappers.RestaurantMapper">
     <select id="queryRestByCityCode" resultType="com.aks.cateringinfosys.entry.Restaurant"></select>
     <select id="queryRestByName" resultType="com.aks.cateringinfosys.entry.Restaurant"></select>
-    <select id="queryRestById" resultType="com.aks.cateringinfosys.entry.Restaurant"></select>
+    <select id="queryRestById" resultType="com.aks.cateringinfosys.entry.Restaurant">
+        select
+    </select>
+    <select id="queryRestAddress" resultType="com.aks.cateringinfosys.entry.City">
+        select tb_city.* from tb_resInfo, tb_city where rid = #{rid} and tb_city.citycode = tb_resInfo.citycode
+    </select>
 </mapper>

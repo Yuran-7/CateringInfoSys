@@ -9,7 +9,11 @@
     <update id="subLikeNum"></update>
     <delete id="deleteLike"></delete>
     <delete id="deleteCommentById"></delete>
-    <select id="queryCommentListByRestId" resultType="com.aks.cateringinfosys.entry.Comment"></select>
-    <select id="queryLike" resultType="java.lang.Integer"></select>
+    <select id="queryCommentListByRestId" resultType="com.aks.cateringinfosys.entry.Comment">
+        select * from  where id = #{id}
+    </select>
+    <select id="queryLike" resultType="java.lang.Integer">
+
+    </select>
     <select id="queryCommentListByUserId" resultType="com.aks.cateringinfosys.entry.Comment"></select>
 </mapper>
